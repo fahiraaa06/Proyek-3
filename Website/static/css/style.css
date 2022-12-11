@@ -5,7 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
  2) font-family: 'Poppins', sans-serif;
  ----------------------------------------*****/
@@ -39,7 +39,7 @@ html {
 body {
     color: #666666;
     font-size: 14px;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
@@ -218,7 +218,7 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: url(../images/banner-bg.png);
+    background-image: url(../img/banner-bg.png);
     height: auto;
     background-size: 100%;
     padding: 10px 0px 25px 0px;
@@ -236,9 +236,10 @@ button {
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 20px;
-    padding-left: 20px;
-    color: #272a2a;
-    font-size: 18px;
+    padding-left: 10px;
+    color: #000000;
+    font-size: 14px;
+    font-family:'Poppins', sans-serif;;
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color: #15e4d0;
@@ -267,7 +268,7 @@ button {
     width: 100%;
     float: left;
     font-size: 60px;
-    color: #15e4d0;
+    color: #305252;
     font-weight: bold;
     line-height: 60px;
     padding-top: 120px;
@@ -297,15 +298,16 @@ button {
     float: left;
     font-size: 18px;
     color: #f6f8f8;
-    background-color: #4bc5b8;
+    background-color: #305252;
     text-align: center;
     padding: 10px 0px;
 }
 
 .contact_bt {
-    width: 170px;
+    width: 150px;
     float: left;
     margin-left: 15px;
+    
 }
 
 .contact_bt a {
@@ -313,14 +315,14 @@ button {
     float: left;
     font-size: 18px;
     color: #f6f8f8;
-    background-color: #252525;
+    background-color: #231F20;
     text-align: center;
     padding: 10px 0px;
 }
 
 .contact_bt a:hover {
     color: #f6f8f8;
-    background-color: #4bc5b8;
+    background-color: #305252;
 }
 
 #main_slider .carousel-control-prev:hover,
@@ -591,7 +593,7 @@ button {
 }
 
 .box_main:hover {
-    background-color: #1becde;
+    background-color: #305252;
 }
 
 .box_main.active {
