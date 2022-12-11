@@ -6,6 +6,10 @@ app = Flask(__name__, static_url_path='/static')
 def dashboard():
     return render_template('index.html')
 
+@app.route("/login")
+def login():
+    return render_template('login.html')
+
 @app.route("/diagnosa")
 def diagnosa():
     return render_template('diagnosa.html')
@@ -13,3 +17,6 @@ def diagnosa():
 @app.route("/history")
 def history():
     return render_template('history.html')
+
+app.run(debug=True)   
+

@@ -311,6 +311,7 @@ button {
 }
 
 .contact_bt a {
+    border-radius: 25px;
     width: 100%;
     float: left;
     font-size: 18px;
