@@ -288,21 +288,6 @@ button {
     margin-top: 30px;
 }
 
-.more_bt {
-    width: 170px;
-    float: left;
-}
-
-.more_bt a {
-    width: 100%;
-    float: left;
-    font-size: 18px;
-    color: #f6f8f8;
-    background-color: #305252;
-    text-align: center;
-    padding: 10px 0px;
-}
-
 .contact_bt {
     width: 150px;
     float: left;
@@ -311,10 +296,11 @@ button {
 }
 
 .contact_bt a {
-    border-radius: 25px;
     width: 100%;
+    border-radius: 25px;
     float: left;
-    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
     color: #f6f8f8;
     background-color: #231F20;
     text-align: center;
