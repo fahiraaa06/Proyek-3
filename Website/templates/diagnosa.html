@@ -60,15 +60,45 @@
         <!-- banner section start -->
 <center>
         <form method='post' action="/diagnosa">
-            <label for="name">Usia:</label>
-            <input name="usia" type="number" size=10>
-
+            <label for="name">Age:</label>
+            <input name="a" type="number" size=10>
             <br>
+            <label for="name">Systolic:</label>
+            <input name="b" type="number" size=10>
+            <br>
+            <label for="name">Diastolic:</label>
+            <input name="c" type="number" size=10>
+            <br>
+            <label for="name">BS:</label>
+            <input name="d" type="number" size=10>
+            <br>
+            <label for="name">Body Temp:</label>
+            <input name="e" type="number" size=10>
+            <br>
+            <label for="name">Heart Rate:</label>
+            <input name="f" type="number" size=10>
+            <br>
+
             <br>
 
             <input type="submit" value="Prediksi">
         </form>
+        
+        <!-- <h2>
+            haloo {{name}} prediksi kamu {{hasil}}
+        </h2> -->
 
+        <h3>
+            {% if hasil == 1 %}
+            Resiko Kehamilan Rendah
+            {% elif hasil == 2 %}
+            Resiko Kehamilan Sedang
+            {% elif hasil == 3 %}
+            Resiko Kehamilan Tinggi
+            {% endif %}
+        </h3>
+        
+        <a href="/logout"><button>logout</button></a>
         {{usia}}
 
     </center>
