@@ -18,6 +18,7 @@ body {
   color: #415D43;
 }
 
+
 /**/
 .main {
   position: relative;
@@ -142,6 +143,7 @@ body {
   left: calc(100% - 600px );
   z-index: 0;
 }
+
 
 .switch {
   display: flex;

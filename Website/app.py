@@ -14,16 +14,16 @@ app = Flask('Ziramed App', static_url_path='/static')
 # app = Flask("Google Login App")
 app.secret_key = "ziramed.com"
 
-# @app.route("/")
-# def dashboard():
-#     return render_template('index.html')
+@app.route("/")
+def dashboard():
+    return render_template('index.html')
 
 # @app.route("/login")
 # def login():
 #     return render_template('user.html')
 import pickle
 # # load the model from disk
-filename = 'D:/Kuliah POLTEKPOS/Semester 5/Proyek TI III/Website/model_rf1.pkl'
+filename = 'D:\Kuliah\SEMESTER 5\Proyek-3\Website/model_rf1.pkl'
 loaded_model = pickle.load(open(filename, 'rb'))
 
 @app.route("/diagnosa", methods=['GET', 'POST'])
@@ -47,6 +47,10 @@ def diagnosa():
 def history():
     return render_template('history.html')
 
+@app.route("/home")
+def home():
+    return render_template('home.html')
+
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
 GOOGLE_CLIENT_ID = "877419741968-knsqo3nrqqcgufcf1t9ldltlfg91i7du.apps.googleusercontent.com"
@@ -67,8 +71,8 @@ def login_is_required(function):
 
     return wrapper
 
-@app.route("/login")
-def login():
+@app.route("/login_google")
+def login_google():
     authorization_url, state = flow.authorization_url()
     session["state"] = state
     return redirect(authorization_url)
@@ -102,17 +106,16 @@ def logout():
     return redirect("/")
 
 
-@app.route("/")
-def index():
-    return "Hello World <a href='/login'><button>Login</button></a>"
-
+@app.route("/user")
+def user():
+    return render_template('user.html')
 
 @app.route("/protected_area")
 @login_is_required
 def protected_area():
     print(session['name'])
     # return f"Hello {session['name']}! <br/> <a href='/logout'><button>Logout</button></a>"
-    return redirect('/diagnosa')
+    return redirect('/home')
     # return redirect(url_for('/diagnosa', , **request.args))
 
 
