@@ -34,7 +34,7 @@ loaded_model = pickle.load(open(filename, 'rb'))
 @app.route("/diagnosa", methods=['GET', 'POST'])
 def diagnosa():
     if request.method == 'GET':
-        return render_template('diagnosa.html', name=session['name'])
+        return render_template('diagnosa.html')
 
     if request.method == 'POST':    
         a = request.form['a']
